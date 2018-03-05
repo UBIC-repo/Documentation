@@ -1,5 +1,5 @@
 By default the API is reachable under the port 12303. It is a REST API using JSON encoding.
-For security reasons every request is required to send a header parameter "apiKey" that contains your API KEY that you can find in ```~/ubic/config.ini```
+For security reasons every request is required to send a header parameter ```apiKey``` that contains your API KEY that you can find in ```~/ubic/config.ini```
 
 Endpoints
 ===
