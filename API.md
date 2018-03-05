@@ -49,3 +49,54 @@ Example response:
     "total": ""
 }
 ```
+
+/peers
+===
+returns all connected peers.
+
+Example response:
+```
+{
+    "peers": [
+        {
+            "ip": "192.0.0.10",
+            "blockHeight": "1376",
+            "donationAddress": ""
+        },
+    ]
+}
+```
+
+/txpool
+===
+returns the pending transactions from the transaction pool.
+
+/delegates
+===
+returns all known delegates.
+
+Example response:
+```
+{
+    "delegates": [
+        {
+            "pubKey": "026b84273f8a385c0858995daae91002cbcc341381cbeb5ff0cd66e29f9ae751ed",
+            "nonce": "0",
+            "totalVote": "14",
+            "votes": "14",
+            "unVotes": "0",
+            "lastVotedInBlock": "",
+            "isActive": "true",
+            "isCurrent": "false",
+            "isMe": "false",
+            "votes": ""
+        }
+    ]
+}
+```
+
+/blocks/{height or hash}
+===
+returns the content of a block.
+
+
