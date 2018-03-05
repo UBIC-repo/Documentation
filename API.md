@@ -9,7 +9,7 @@ Endpoints
 returns basic information regarding the node status.
 
 Example response:
-c
+```
 {
     "bestBlock": {
         "hash": "c7135c059bcd1fcab4f76095110c76f815f712021fbd43c7f2df223515d50d75",
