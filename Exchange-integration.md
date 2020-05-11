@@ -229,6 +229,7 @@ Response:
 In this case we created a transaction with 2 outputs.
 
 Step 2 is to send the transaction:
+
 Query:
 ```
 POST http://127.0.0.1:12303/wallet/send
@@ -294,6 +295,9 @@ The current block time is between 3 and 5 minutes, so transactions should idealy
 ### Stay informed and be cautiousness
 UBIC is an experimental cryptocurrency that is still in it's early stages, this means that bugs are likely to occur.
 Many new releases with new protocol features are also sheduled, so it is important to stay informed in order to keep the node running.
+
+### Use the web interface
+Use the web interface of the node to play around, using the browser inspection tools you will be able to see and analyze the API calls that are made.
 
 # Questions
 If you have questions don't hesitate to open a github issue.
