@@ -132,21 +132,26 @@ curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/wallet/
 {
     "addresses": [
         {
-            "readable": "qXPeVk5oQgnXzN2WF1bzejtYf9VcpXQxi",
-            "hex": "456bb9959c8d3d3b2433674e81e41567822ee5d2",
-            "pubKey": "02fdcff0506a3569aabefd49d4be88386a7eb44815d363490e792ad23029c5c49c",
+            "readable": "qbAnMsiGXXPFSFvjBpRwYgZbuc2a6ibAV",
+            "addressLink": "7ce3318301bad5fbdb58f8d034bac2d8453ffc46",
+            "hexscript": "fc5892311282ed287f50a2553936824bacbac30e",
+            "pubKey": "02bf863cb4e2493773d957587d019bbfe4730ec351a371962db752c9a08cafa464",
+            "amount": {
+                "2": "890150078"
+            }
+        },
+        {
+            "readable": "qW4TQapcRRFJsBraQVa3Jrs1Sg3mfhvXh",
+            "addressLink": "dca85fc8579a9cf7ca9161e699ceb9147f235e40",
+            "hexscript": "04fc1e8999f350c7656cc33e448ad5309488cd55",
+            "pubKey": "03dcc5d5a3146459972c172b33e2a2ea894e0b1aa15d0e2ee3b380908bbba42f5e",
             "amount": ""
         },
         {
-            "readable": "qYxo1v3DRrpqsxmePKTXHvA44sGreWFRU",
-            "hex": "9181a37f79bdfa3d2ae07f70fb429a55f2ddab85",
-            "pubKey": "029ecab6b53e32fe2f599874b25c6640431bf80264feffb2c159a85c962fceedf8",
-            "amount": ""
-        },
-        {
-            "readable": "qWusuMDj8Vojt1kXM69GXgMDTqEPRU2iE",
-            "hex": "2e3d93c77ed8b3e9aa2923c1eeb87529bb20d897",
-            "pubKey": "022789585774ccb185e583eac6c3ad326776b87988afac324c4b0982ce99276760",
+            "readable": "qYr6b2sNtEY4vwRWEcRsNqvhHytf7Aztb",
+            "addressLink": "13185d602c9ec6f3d378646d7ca2a59ede532342",
+            "hexscript": "8bea7de8cd2b64aaf6b26a51c99c71b024c586d2",
+            "pubKey": "0370664c41eeb152b0c317211a7a8c933588201bc7bf2437d1ae64e589d627c355",
             "amount": ""
         },
     ],
