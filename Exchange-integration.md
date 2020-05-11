@@ -4,7 +4,7 @@ It is currently recommended that the node has at least 4GB of ram and at least 2
 
 The installation of the node is explained [here](https://github.com/UBIC-repo/core#installation-on-linux).
 
-#Exchange integration
+# Exchange integration
 # configuring the node
 By default the node is configured to generate 100 addresses from the ```wallet.dat``` seed. This number can be increased in the ```~/ubic/config.ini``` file.
 
