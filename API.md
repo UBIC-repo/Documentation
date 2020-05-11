@@ -75,7 +75,7 @@ A transaction in progress
 
 Request:
 ```
-curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/wallet/
+curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/incoming/
 ```
 
 Example response:
