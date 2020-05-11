@@ -1,19 +1,20 @@
-By default the API is reachable under the port 12303. It is a REST API using JSON encoding.
-For security reasons every request is required to send a header parameter ```apiKey``` that contains your API KEY that you can find in ```~/ubic/config.ini```
+默认情况下，API端口12303,JSON编码的REST API。
 
-Endpoints
+出于安全考虑，每个请求都需要发送一个头参数``` apiKey ```，该参数包含您可以在``` ~/ubic/config.ini```中找到的API密匙
+
+接口
 ===
 
 ```/``` or ```status```
 ===
-returns basic information regarding the node status.
+返回关于节点状态的基本信息。
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/status/
 ```
 
-Example response:
+返回:
 ```
 {
     "bestBlock": {
@@ -26,14 +27,14 @@ Example response:
 ```
 /currencies
 ===
-currencies
+币种
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/currencies/
 ```
 
-Example response:
+返回:
 ```
 {
     "currencyCodes": {
@@ -71,14 +72,14 @@ Example response:
 
 /incoming
 ===
-A transaction in progress
+正在转入的交易
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/incoming/
 ```
 
-Example response:
+返回:
 ```
 {
     "transactions": [
@@ -119,14 +120,14 @@ Example response:
 
 /wallet
 ===
-returns all addresses contained in the wallet.
+返回钱包中包含的所有地址。
 
-Request:
+请求
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/wallet/
 ```
 
-Example response:
+返回:
 ```
 {
     "addresses": [
@@ -153,15 +154,16 @@ Example response:
             "pubKey": "0370664c41eeb152b0c317211a7a8c933588201bc7bf2437d1ae64e589d627c355",
             "amount": ""
         },
+    ],
     "total": ""
 }
 ```
 
 /wallet/createTransaction
 ===
-Create a Transaction
+创建交易
 
-Request:
+请求:
 ```
 curl 'http://127.0.0.1:12303/wallet/createTransaction' \
   -H 'apiKey: xxxxxx' \
@@ -171,12 +173,12 @@ curl 'http://127.0.0.1:12303/wallet/createTransaction' \
 ```
 ```
 {"qYqo3LsVmyusiZHSqAEndcLnNSgEqNUah":{"2":100000000}}
-address：qYqo3LsVmyusiZHSqAEndcLnNSgEqNUah
-currencies: 2
-amount: 100000000
+地址：qYqo3LsVmyusiZHSqAEndcLnNSgEqNUah
+币种：2
+数量：100000000/1000000=100个
 ```
 
-Example response:
+返回
 ```
 {
     "success": "true",
@@ -214,9 +216,9 @@ Example response:
 
 /wallet/send
 ===
-Send a Transaction
+发送交易
 
-Request:
+请求:
 ```
 curl 'http://127.0.0.1:12303/wallet/send' \
   -H 'apiKey: xxxxxx' \
@@ -224,23 +226,23 @@ curl 'http://127.0.0.1:12303/wallet/send' \
   --compressed \
   --insecure
 ```
-json data for createTransaction base64
+json数据为创建交易后返回的base64数据
 
-Example response：
+返回：
 ```
 {"success": true}
 ```
 
 /wallet/transactions
 ===
-Local transaction data
+本地发生的转账
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/wallet/transactions/
 ```
 
-Example response:
+返回:
 ```
 {
     "transactions": [
@@ -313,14 +315,14 @@ Example response:
 ```
 /wallet/generate-key-pair
 ===
-Generate an address that contains the private key，this key is not stored in the UBIC wallet
+生成一个地址，包含私钥
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/wallet/generate-key-pair
 ```
 
-Example response:
+返回:
 
 ```
 {
@@ -332,14 +334,13 @@ Example response:
 ```
 /address/{addressLink}
 ===
-Query the address
-
-Request:
+查询地址交易
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/address/{addressLink}
 ```
 
-Example response:
+返回:
 ```
 {
     "address": {
@@ -360,14 +361,14 @@ Example response:
 
 /peers
 ===
-returns all connected peers.
+返回所有已连接的节点。
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/peers/
 ```
 
-Example response:
+返回:
 ```
 {
     "peers": [
@@ -432,9 +433,8 @@ Example response:
 ```
 /peers/add
 ===
-add peer
+增加节点
 
-Request:
 ```
 curl 'http://127.0.0.1:12303/wallet/add' \
   -H 'apiKey: xxxxxx' \
@@ -443,16 +443,15 @@ curl 'http://127.0.0.1:12303/wallet/add' \
   --insecure
 ```
 
-Example response:
+返回:
 ```
 {"success": true}
 ```
 
 /peers/remove
 ===
-remove peer
+删除节点
 
-Request:
 ```
 curl 'http://127.0.0.1:12303/wallet/send' \
   -H 'apiKey: xxxxxx' \
@@ -461,21 +460,21 @@ curl 'http://127.0.0.1:12303/wallet/send' \
   --insecure
 ```
 
-Example response:
+返回:
 ```
 {"success": true}
 ```
 
 /txpool
 ===
-returns all connected peers.
+从事务池返回挂起的事务。
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/peers/
 ```
 
-Example response:
+返回
 ```
 {
     "transactions": ""
@@ -484,14 +483,14 @@ Example response:
 
 /delegates
 ===
-returns all known delegates.
+返回所有已知的委托。
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/peers/
 ```
 
-Example response:
+示例:
 ```
 {
     "delegates": [
@@ -513,14 +512,14 @@ Example response:
 
 /blocks/{height or hash}
 ===
-returns the content of a block.
+返回一个块的内容
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/blocks/{height or hash}
 ```
 
-Example response:
+返回:
 ```
 {
     "blockHeader": {
@@ -568,14 +567,14 @@ Example response:
 
 /bans
 ===
-Node score
+节点的分数
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/bans
 ```
 
-Example response:
+返回:
 ```
 {
     "bans": [
@@ -589,14 +588,14 @@ Example response:
 
 fees
 ===
-Transfer formalities rate query
+转账手续费率
 
-Request:
+请求:
 ```
 curl -s -H "apiKey:xxxxxxx" http://127.0.0.1:12303/fees
 ```
 
-Example response:
+返回:
 ```
 {
     "description": "Fees for 1MB (1000 bytes)",
