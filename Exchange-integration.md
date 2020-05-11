@@ -12,7 +12,7 @@ By default the node is configured to generate 100 addresses from the ```wallet.d
 # The number of addresses to generate from the wallet.dat seed
 numberOfAdresses = 100
 ```
-This number can be increased indefinitively but note that this will slow down node.
+The number of addresses generated from the ```wallet.dat``` seed can be increased indefinitively but note that this will slow down node.
 
 The node only accepts the connection from one IP address that is specified also specified in the ```config.ini``` file. By default this ip address is set to ```127.0.0.1```
 
