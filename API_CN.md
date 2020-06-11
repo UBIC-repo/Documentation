@@ -222,7 +222,7 @@ curl 'http://127.0.0.1:12303/wallet/createTransaction' \
 ```
 curl 'http://127.0.0.1:12303/wallet/send' \
   -H 'apiKey: xxxxxx' \
-  --data 'json={"base64":"AQEBAgAAAAAGjC1CFHzjMYMButX721j40DS6wthFP/xGAAAAAAJrACECv4Y8tOJJN3PZV1h9AZu/5HMOw1GjcZYtt1LJoIyvpGRHMEUCICH8Mq6eqMggZmPNMF38OSoJyTN9ps6dtyIcOQe0cwo6AiEAtmEdlN/tgINlFJWsYYoFsPZLJ7HTZ086JWJ8QZIJat8BAQIAAAAABfXhAAIUi6nX1qdDA6eVSFAKygQjloQxoDAAAA=="}' \
+  --data-urlencode 'json={"base64":"AQEBAgAAAAAGjC1CFHzjMYMButX721j40DS6wthFP/xGAAAAAAJrACECv4Y8tOJJN3PZV1h9AZu/5HMOw1GjcZYtt1LJoIyvpGRHMEUCICH8Mq6eqMggZmPNMF38OSoJyTN9ps6dtyIcOQe0cwo6AiEAtmEdlN/tgINlFJWsYYoFsPZLJ7HTZ086JWJ8QZIJat8BAQIAAAAABfXhAAIUi6nX1qdDA6eVSFAKygQjloQxoDAAAA=="}' \
   --compressed \
   --insecure
 ```
